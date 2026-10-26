@@ -1,19 +1,16 @@
 def hitung_rata_rata(nilai):
-    return sum(nilai) / 5
+    return sum(nilai) / len (nilai)
 
 def status(nilai):
-    if nilai > 60:
+    if nilai >= 60:
         return "Lulus"
     return "Tidak lulus"
 
 def nilai_tertinggi(nilai):
-    tertinggi = 0
-    for x in nilai:
-        if x < tertinggi:
-            tertinggi = x
+    tertinggi = max (nilai)
     return tertinggi
 
-nilai = [80, 60, 90, 70]
+nilai = [100, 80]
 print("Rata-rata:", hitung_rata_rata(nilai))
-print("Status 60:", status(60))
+print("Status 60:", status(59))
 print("Tertinggi:", nilai_tertinggi(nilai))
